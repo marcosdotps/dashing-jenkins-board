@@ -37,7 +37,7 @@ require 'jsonpath'
 		statusArray.fill("grey")
 		theArray = BuildOrderedJobsArray(jobsDisplayNameArray,jobsTimestampArray, statusArray, nil)		
 		
-		puts "Running jobs" + theArray.size
+		puts "Running jobs" + theArray.length.to_s
 
 		return theArray.slice(0..9)															
 	end
@@ -110,7 +110,7 @@ require 'jsonpath'
 		theArray = Array.new	
 		theArray = BuildOrderedJobsArray(jobsDisplayNameArray,jobsTimestampArray, statusArray, jobsDurationArray)		
 
-		puts "Completed: " +theArray.size
+		puts "Completed: " +theArray.length.to_s
 
 		return theArray.slice(0..9)											
 		
